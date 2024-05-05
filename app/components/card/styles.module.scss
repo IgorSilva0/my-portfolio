@@ -1,0 +1,32 @@
+.imgBg {
+    right: 0;
+    border-radius: 1rem;
+    height: 100%;
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #D1D9E6;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+}
+.img {
+    width: 20rem;
+    height: 24rem;
+    vertical-align: top;
+}
+.division {
+    height: 2rem;
+    background-color: black;
+}
+.social {
+    bottom: 0;
+    margin: 0;
+    padding: 0.5rem 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.social li {
+    border-radius: 0.5rem;
+    width: 16px;
+    height: 16px;
+    padding: 1rem;
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+}

@@ -1,20 +1,35 @@
+import styles from './styles/styles.module.scss'
+import { Roboto } from 'next/font/google'
+import Card from './components/card/card'
+import Nav from './components/nav/nav'
+
+const roboto = Roboto({
+  weight: '400',
+  subsets: ['latin'],
+})
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Igor`s Portfolio",
-  description: "Generated with ❣️",
+  description: "Created with ❣️",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout = ({children}: Readonly<{children: React.ReactNode;}>) => {
   return (
     <html lang="en">
-      <body>
-        {children}
+      <body className={`${styles.body} ${roboto.className}`}> 
+          <main className={styles.main}>
+          
+            <div className={styles.container}>
+              <Nav/>
+              {children}
+            </div>
+            
+            <Card/>
+          </main>
       </body>
     </html>
   );
 }
+export default RootLayout

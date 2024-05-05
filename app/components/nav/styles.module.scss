@@ -1,0 +1,24 @@
+.navBar {
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-evenly;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    background: linear-gradient(145deg, #ffffff, #e2e8ec);
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #D1D9E6;
+    border-radius: 0 0 0 1rem;
+}
+.navBar button {
+    width: 5rem;
+    margin: 0.5rem;
+    padding:  0 0.5rem;
+    background: transparent;
+    border: none;
+}
+.navBar button:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+.navBar button:focus {
+    font-weight: bold;
+}
