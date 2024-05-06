@@ -2,9 +2,9 @@ import styles from './styles.module.scss'
 
 const About = () => {
     return (
-        <div>
-            <h1>Hello, I&apos;m Igor Silva,</h1>
-            <h3>Fresh out of an exhilarating software development bootcamp, I&apos;m buzzing with enthusiasm to share my journey with you.</h3>
+        <div className={styles.about}>
+            <h1>Hi again, I&apos;m Igor Silva,</h1>
+            <p>Fresh out of an exhilarating software development bootcamp, I&apos;m buzzing with enthusiasm to share my journey with you.</p>
             <p>During this immersive experience, I delved into every nook and cranny of tech—from the creative finesse of front-end design to the intricate workings of back-end development, and even ventured into the realms of databases, cybersecurity, and cloud technologies.</p>
             <p>But what truly set this experience apart was the camaraderie forged in collaboration. Working alongside over 50 talented peers in a virtual workspace, Monday to Friday, 9 am to 5 pm, via Zoom, was nothing short of inspiring. Together, we navigated challenges, shared insights, and grew not just as developers, but as professionals.</p>
             <p>Beyond the technical skills, I embraced the essence of teamwork, the power of effective communication, and the agility of modern methodologies. It was a journey of self-discovery and continuous learning.</p>

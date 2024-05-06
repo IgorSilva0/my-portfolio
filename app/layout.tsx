@@ -4,7 +4,7 @@ import Card from './components/card/card'
 import Nav from './components/nav/nav'
 
 const roboto = Roboto({
-  weight: '400',
+  weight: '500',
   subsets: ['latin'],
 })
 
@@ -23,7 +23,9 @@ const RootLayout = ({children}: Readonly<{children: React.ReactNode;}>) => {
           
             <div className={styles.container}>
               <Nav/>
-              {children}
+              <div className={styles.content}>
+                {children}
+              </div>
             </div>
             
             <Card/>

@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    user-select: none;
 }
 .main {
     margin: 50px;
@@ -14,19 +15,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-
 }
 .container {
     width: 100%;
-    height: 90%;
+    height: 95%;
     display: flex;
     flex-direction: column;
+
+}
+.content {
+    height: 44rem;
+    border-radius: 1rem 0 0 1rem;
     box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #D1D9E6;
     background: linear-gradient(270deg, #ffffff, #e2e8ec);
-    border-radius: 1rem 0 0 1rem;
+    padding: 0 2rem;
 }
 .home {
-    padding-left: 50px;
+    height: 100%;
     align-items: center;
+    overflow: scroll;
+}
+.home::-webkit-scrollbar {
+    display: none;
 }
