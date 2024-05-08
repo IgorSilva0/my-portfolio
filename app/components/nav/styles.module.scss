@@ -4,20 +4,22 @@
     justify-content: space-evenly;
     gap: 1rem;
     padding-right: 1.5rem;
-    background: linear-gradient(145deg, #ffffff, #e2e8ec);
-    box-shadow: -5px -5px 15px #D1D9E6;
+    background-color: #353535;
+    box-shadow: -2px -5px 15px #b0b5be;
     border-radius: 1rem 0 0 0;
 }
 .navBar button {
+    color: #ffffffe7;
     width: 6.5rem;
-    padding:  0.5rem 0.5rem;
+    padding:  0.5rem;
     background: transparent;
+    font-weight: bold;
     border: none;
 }
 .navBar button:hover {
-    font-weight: bold;
+    color: #ffffff;
     cursor: pointer;
 }
 .navBar button:focus {
-    font-weight: bold;
+    color: #ffffff;
 }

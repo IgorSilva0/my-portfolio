@@ -2,6 +2,7 @@ import styles from './styles/styles.module.scss'
 import { Roboto } from 'next/font/google'
 import Card from './components/card/card'
 import Nav from './components/nav/nav'
+import Footer from './components/footer/page'
 
 const roboto = Roboto({
   weight: '500',
@@ -26,6 +27,7 @@ const RootLayout = ({children}: Readonly<{children: React.ReactNode;}>) => {
               <div className={styles.content}>
                 {children}
               </div>
+              <Footer/>
             </div>
             
             <Card/>

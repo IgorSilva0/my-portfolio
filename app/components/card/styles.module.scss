@@ -1,7 +1,7 @@
 .card {
     right: 0;
     border-radius: 1rem;
-    height: 100%;
+    height: fit-content;
     box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #D1D9E6;
     background: linear-gradient(145deg, #e2e8ec, #ffffff);
     position: relative;
@@ -37,9 +37,10 @@
 .socialContainer {
     width: 20.5rem;
     text-align: center;
+    padding: 10px 0;
 }
 .social li:hover {
-    box-shadow: 0px 0px 10px #666666;
+    box-shadow: 0px 0px 10px #b3b3b3;
     background: transparent;
     background-color: #ffffff;
     transition: 1s ease-out;
