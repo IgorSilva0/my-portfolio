@@ -1,26 +1,40 @@
 .navBar {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 4rem;
+    padding: 2rem 5rem;
     align-items: center;
 }
 
-.socials,
+.signature {
+    position: relative;
+}
+
+.socials {
+    display: flex;
+    width: 100%;
+}
+
+.socials a {
+    margin: 5px 15px;
+}
+
 .btns {
     display: flex;
+    justify-content: flex-end;
     gap: 1rem;
+    width: 100%;
 }
 
 .icons {
     font-size: x-large;
-    color: #000000;
+    color: #ffffff;
     border-radius: 10px;
 }
 
 .navBar button {
     border: none;
     background-color: transparent;
-    color: #000000;
+    color: #ffffff;
     padding: 5px 15px;
     font-weight: 600;
     font-size: 15px;
@@ -28,6 +42,7 @@
 }
 
 .navBar button:hover {
-    box-shadow: 0 0 3px #000000;
+    box-shadow: 0 0 5px #ffffff;
     cursor: pointer;
+    transition: 0.3s;
 }

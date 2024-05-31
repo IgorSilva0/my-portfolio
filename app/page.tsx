@@ -8,7 +8,7 @@ const Home = () => {
         <h1>Hi my name is Igor</h1>
       </div>
       <div className={styles.imgBox}>
-        <Image src={'imgs/image.jpeg'} alt='Profile image' width={100} height={110}/>
+        Image  
       </div>
     </div>
     
