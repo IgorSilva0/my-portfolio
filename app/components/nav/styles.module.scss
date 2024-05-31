@@ -1,25 +1,33 @@
 .navBar {
     display: flex;
-    align-self: flex-end;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    align-items: center;
+}
+
+.socials,
+.btns {
+    display: flex;
     gap: 1rem;
-    padding-right: 1.5rem;
-    background-color: #353535;
-    box-shadow: -2px -5px 15px #b0b5be;
-    border-radius: 1rem 0 0 0;
 }
+
+.icons {
+    font-size: x-large;
+    color: #000000;
+    border-radius: 10px;
+}
+
 .navBar button {
-    color: #ffffffe7;
-    width: 6.5rem;
-    padding:  0.5rem;
-    background: transparent;
-    font-weight: bold;
     border: none;
+    background-color: transparent;
+    color: #000000;
+    padding: 5px 15px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 5px;
 }
+
 .navBar button:hover {
-    color: #ffffff;
+    box-shadow: 0 0 3px #000000;
     cursor: pointer;
-}
-.navBar button:focus {
-    color: #ffffff;
 }
