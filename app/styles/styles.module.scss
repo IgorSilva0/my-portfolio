@@ -5,13 +5,24 @@
 }
 
 .body {
-    box-sizing: border-box;
     background: linear-gradient(#0D1B2A, #415A77);
     color: #ffffff;
 }
 
-.home {
+.section {
     display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+.home {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 5rem;
+}
+
+.intro {
+    max-width: 30vw;
 }
