@@ -5,7 +5,7 @@
 }
 
 .body {
-    background: linear-gradient(#0D1B2A, #415A77);
+    background: linear-gradient(#000000, #0D1B2A);
     color: #ffffff;
 }
 
@@ -25,4 +25,19 @@
 
 .intro {
     max-width: 30vw;
+}
+
+.imgBox {
+    position: relative;
+    height: 320px;
+    width: 230px;
+    padding: 0 2rem;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #1B263B, #000000);
+    box-shadow: -150px 0px 300px #ff00004b;
+}
+
+.img {
+    position: absolute;
+    bottom: 0;
 }

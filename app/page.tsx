@@ -16,7 +16,7 @@ const Home = () => {
              Thanks for stopping by!</p>
         </div>
         <div className={styles.imgBox}>
-          \\\Image\\\
+          <Image className={styles.img} src={'/imgs/profile.png'} alt='Profile image' width={230} height={400}/>
         </div>
       </div>
     </section>
