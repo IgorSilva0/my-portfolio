@@ -8,12 +8,16 @@ const Home = () => {
       <Nav/> 
       <div className={styles.home}>
         <div className={styles.intro}>
-          <h1>Full-Stack Engineer</h1>
-          <p>Hi there! I&apos;m Igor Silva. Welcome to my portfolio.
-             I&apos;m excited to share my journey and work with you.
+          <p className={styles.welcome}>Welcome to my portfolio</p>
+          <h1 className={styles.title}>I&apos;m <p className={styles.name}>Igor Silva</p>, a <br/>Full-Stack Engineer.</h1>
+          <p className={styles.txt}>I&apos;m excited to share my journey with you.
              Here, you&apos;ll find a collection of projects that
              I&apos;m passionate about and proud of.
-             Thanks for stopping by!</p>
+          </p>
+          {/* <p className={styles.txt}>I'm always excited to learn and dive into new technologies,
+             frameworks, and programming languages.
+          </p> */}
+          <p className={styles.thanks}>Thanks for stopping by!</p>
         </div>
         <div className={styles.imgBox}>
           <Image className={styles.img} src={'/imgs/profile.png'} alt='Profile image' width={230} height={400}/>
