@@ -6,6 +6,7 @@
 
 .body {
     background: linear-gradient(#000000, #1B263B);
+    background-attachment: fixed;
     color: #ffffff;
 }
 
@@ -25,7 +26,7 @@
 
 .intro {
     max-width: 35vw;
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
 }
 
 .welcome {
@@ -59,20 +60,47 @@
     color: #ffffff9c;
     margin: 0;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .imgBox {
     position: relative;
-    height: 320px;
-    width: 230px;
+    height: 370px;
+    width: 265px;
     padding: 0 2rem;
     border-radius: 5px;
     background: linear-gradient(145deg, #1B263B, #000000);
-    box-shadow: -150px 0px 300px #579be983, 3px 3px 4px #579be9;
+    box-shadow: -150px 0px 300px #579be983, 5px 5px 10px #000000;
+    margin-bottom: 2rem;
 }
 
 .img {
     position: absolute;
     bottom: 0;
+}
+
+.angles {
+    position: absolute;
+    align-self: center;
+    bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+// Projects Section
+
+.projectsSection {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+.projectsIntro {
+    margin: 2rem;
+    align-self: center;
+
+}
+
+.projectsTitle {
+    font-size: 3rem;
+    margin: 0;
 }
