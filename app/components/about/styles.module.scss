@@ -1,0 +1,44 @@
+.about {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+}
+
+.imgBox {
+    position: relative;
+    height: 350px;
+    width: 370px;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #1B263B, #000000);
+    box-shadow: 150px 0px 300px #579be983, 5px 5px 10px #000000;
+    margin-bottom: 2rem;
+}
+
+.img {
+    position: absolute;
+    bottom: 0;
+}
+
+.aboutContent {
+    width: 40vw;
+    margin-bottom: 3rem;
+}
+
+.aboutContent h3 {
+    margin: 24px 10px;
+    font-size: 1.5rem;
+}
+
+.aboutContent p {
+    font-size: 1.1rem;
+    color: #d6d6d6;
+    margin: 10px;
+}
+
+.location {
+    margin: 0;
+    font-size: 1rem;
+    color: #8d8d8d;
+}
