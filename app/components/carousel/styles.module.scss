@@ -1,13 +1,14 @@
 .swiper {
-    width: 300px;
+    width: 30vw;
     height: 300px;
     padding: 50px;
+    margin: 0;
 }
 
 .swiperSlide {
     background-position: center;
     background-size: cover;
-    width: 300px;
+    width: 500px;
     height: 300px;
     display: flex;
     align-items: center;
@@ -16,4 +17,97 @@
 .swiperSlide img {
     display: block;
     width: 100%;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.quoteBox {
+    padding: 10px;
+    width: 30vw;
+}
+
+.quoteBox h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.quoteBox p {
+    font-size: 1rem;
+}
+
+.btnsBox {
+    padding-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btnsBox a {
+    background-color: #449bff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btnsBox a:hover {
+    background-color: #449bffd8;
+}
+
+.stack {
+    display: flex;
+    font-size: 2rem;
+    gap: 1rem;
+}
+
+.SiNextdotjs {
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 100%;
+    border: 1px solid #ffffff;
+}
+
+.SiTailwindcss {
+    color: #30c4ff;
+}
+
+.SiDaisyui {
+    padding: 0 1px;
+    background: linear-gradient(45deg, #ff0000, #003cff);
+    border-radius: 100%;
+}
+
+.SiTerraform {
+    color: #2369ff;
+}
+
+.SiSupabase {
+    color: #0ee20e;
+}
+
+.SiTypescript {
+    color: #008cff;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+.SiPlaywright {
+    color: #0ee20e;
+}
+
+.SiJavascript {
+    color: #f1e211;
+    border-radius: 3px;
+}
+
+.SiCss3 {
+    color: #3091ff;
+}
+
+.SiSass {
+    color: #e372ff;
 }

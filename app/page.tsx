@@ -2,8 +2,10 @@ import styles from './styles/styles.module.scss';
 import { FaAnglesDown } from "react-icons/fa6";
 import Image from 'next/image';
 import Nav from './components/nav/nav';
-import Code from './components/code/code'
-import TestSwiper from './components/carousel/carousel';
+import Project from './components/carousel/carousel';
+import {SoCImgs, SoCQuote} from '@/public/imgs/SoCBrain/imgs';
+import {GCImgs, GCQuote} from '@/public/imgs/GamingCombo/imgs'
+import {CImgs, CQuote} from '@/public/imgs/Countries/imgs'
 
 const Home = () => {
   return (
@@ -34,7 +36,14 @@ const Home = () => {
           <h1 className={styles.projectsTitle}>My Work</h1>
       </div>
       <div className={styles.projects}>
-          <TestSwiper/>
+          <Project imgs={SoCImgs} quote={SoCQuote}/>
+          <Project imgs={CImgs} quote={CQuote}/>
+          <Project imgs={GCImgs} quote={GCQuote}/>
+      </div>
+    </section>
+    <section className={styles.about}>
+      <div className={styles.aboutIntro}>
+          <h1 className={styles.aboutTitle}>About me</h1>
       </div>
     </section>
     </>

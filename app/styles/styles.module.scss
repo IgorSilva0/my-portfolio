@@ -2,6 +2,17 @@
 .html {
     margin: 0;
     height: 100%;
+    overflow-y: scroll;
+    /* Enable scrolling */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.html::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
 }
 
 .body {
@@ -97,10 +108,59 @@
 .projectsIntro {
     margin: 2rem;
     align-self: center;
-
 }
 
 .projectsTitle {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.projects {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    width: 80vw;
+    overflow-y: scroll;
+}
+
+/* Customize the scrollbar track */
+.projects::-webkit-scrollbar-track {
+    height: 80%;
+    background: #000000;
+    border-radius: 10px;
+    /* Red background for the track */
+}
+
+/* Customize the scrollbar thumb (draggable part) */
+.projects::-webkit-scrollbar-thumb {
+    background-color: #449bff;
+    /* Blue color for the thumb */
+    border-radius: 10px;
+    /* Rounded corners for the thumb */
+}
+
+/* Customize the scrollbar itself */
+.projects::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the vertical scrollbar */
+    height: 12px;
+    /* Height of the horizontal scrollbar */
+}
+
+// About section
+
+.about {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+.aboutIntro {
+    margin: 2rem;
+    align-self: center;
+}
+
+.aboutTitle {
+    font-size: 2.5rem;
     margin: 0;
 }
