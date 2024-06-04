@@ -232,3 +232,23 @@
     align-items: center;
     justify-content: center;
 }
+
+.contactContainer h1 {
+    box-shadow: 0 120px 500px #ffffff;
+}
+
+.contactContainer a {
+    font-size: 1.5rem;
+    color: chartreuse;
+}
+
+.thankYou {
+    font-size: 2rem;
+    /* Adjust as needed */
+    font-weight: bold;
+    /* Adjust as needed */
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+}

@@ -115,6 +115,9 @@ const Home = () => {
           <p>Email : igorsilvauk@gmail.com </p>
           <p>Phone : 07748122933 </p>
           <p>Based in Cheshire - UK</p>
+          <a href='https://imgur.com/a/cv-draft-lqbesXc' target='_blank'>Link to my CV (draft)</a>
+          <p className={styles.thankYou}>Thank you for visiting my Portfolio!</p>
+          <p>Click the icon below to scroll back to the top of the page!</p>
         </div>
         {current === 'contact' ? <GiReturnArrow className={styles.arrowDown} style={{ opacity: arrowVisible, fontSize: '5rem' }} onClick={()=>handleClick('home')}/> : null}
       </section>
