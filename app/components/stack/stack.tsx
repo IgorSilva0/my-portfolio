@@ -33,10 +33,10 @@ export default function Stack() {
       viewport={{ once: true }}
       variants={fadeInUp} className={styles.stack}
     >
-      <h3>My Stack</h3>
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
+        grabCursor={true}
         autoplay={{
           delay: 5000, // adjust the delay as needed
           disableOnInteraction: false,
@@ -59,32 +59,28 @@ export default function Stack() {
         className={styles.swiper}
         loop={true} // Enable continuous loop
       >
-        <SwiperSlide className={styles.swiperSlide}><SiVercel className={styles.SiVercel}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiTailwindcss className={styles.SiTailwindcss}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiGit className={styles.SiGit}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiNextdotjs className={styles.SiNextdotjs}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiNodedotjs className={styles.SiNodedotjs}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiDaisyui className={styles.SiDaisyui}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiTerraform className={styles.SiTerraform}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiSupabase className={styles.SiSupabase}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiTypescript className={styles.SiTypescript}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiExpress className={styles.SiExpress}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiJest className={styles.SiJest}/></SwiperSlide>
-
-        <SwiperSlide className={styles.swiperSlide}><SiFramer className={styles.SiFramer}/></SwiperSlide>
-
-        <SwiperSlide className={styles.swiperSlide}><SiSwiper className={styles.SiSwiper}/></SwiperSlide>
-
-
-        <SwiperSlide className={styles.swiperSlide}><SiReact className={styles.SiReact}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiJavascript className={styles.SiJavascript}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiPlaywright className={styles.SiPlaywright}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiSwr className={styles.SiSwr}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiCss3 className={styles.SiCss3}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiPostgresql className={styles.SiPostgresql}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiSass className={styles.SiSass}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiGithubactions className={styles.SiGithubactions}/></SwiperSlide>
-        <SwiperSlide className={styles.swiperSlide}><SiHtml5 className={styles.SiHtml5}/></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiVercel className={styles.SiVercel}/><a>Vercel</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiTailwindcss className={styles.SiTailwindcss}/><a>Tailwind</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiGit className={styles.SiGit}/><a>Git</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiNextdotjs className={styles.SiNextdotjs}/><a>Next.js</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiNodedotjs className={styles.SiNodedotjs}/><a>Node.js</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiDaisyui className={styles.SiDaisyui}/><a>DaisyUI</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiTerraform className={styles.SiTerraform}/><a>Formik</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiSupabase className={styles.SiSupabase}/><a>Supabase</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiTypescript className={styles.SiTypescript}/><a>TypeScript</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiExpress className={styles.SiExpress}/><a>Express.js</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiJest className={styles.SiJest}/><a>Jest</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiFramer className={styles.SiFramer}/><a>Motion</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiSwiper className={styles.SiSwiper}/><a>Swiper</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiReact className={styles.SiReact}/><a>React</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiJavascript className={styles.SiJavascript}/><a>JavaScript</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiPlaywright className={styles.SiPlaywright}/><a>Playwright</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiSwr className={styles.SiSwr}/><a>Swr</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiCss3 className={styles.SiCss3}/><a>Css</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiPostgresql className={styles.SiPostgresql}/><a>Postgres</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiSass className={styles.SiSass}/><a>Sass</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiGithubactions className={styles.SiGithubactions}/><a>GH.Actions</a></SwiperSlide>
+        <SwiperSlide className={styles.swiperSlide}><SiHtml5 className={styles.SiHtml5}/><a>Html</a></SwiperSlide>
         
       </Swiper>
     </motion.div>

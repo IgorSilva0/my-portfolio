@@ -1,3 +1,5 @@
+@import '../../styles/variables.module';
+
 .navBar {
     display: flex;
     justify-content: space-between;
@@ -37,7 +39,7 @@
     color: #ffffff;
     padding: 5px 15px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: $body-text-size;
     border-radius: 5px;
 }
 

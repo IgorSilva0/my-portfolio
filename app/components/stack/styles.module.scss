@@ -1,29 +1,32 @@
+@import '../../styles/variables.module';
+
 .swiper {
     width: 60%;
-    height: 40px;
+    height: 65px;
     margin-bottom: 5rem;
-    padding: 15px 5rem;
+    padding: 10px 5rem;
     background: linear-gradient(to right, #ffffff00, #000000a4, #ffffff00);
     // box-shadow: 0 3px 5px #000000;
 }
 
 .swiperSlide {
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
 
     /* Center slide text vertically */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: $stack-icon-size;
     width: 10px;
     padding-right: 80px;
     margin-right: 0px !important;
 }
 
-.stack {
-    text-align: center;
-    font-size: 1.3rem;
+.swiperSlide a {
+    font-size: $tool-name-size;
+    margin-top: 10px;
 }
 
 /// Icons ///

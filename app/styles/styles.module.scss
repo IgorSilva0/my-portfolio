@@ -1,19 +1,10 @@
+@import './variables.module';
+
 .body,
 .html {
     margin: 0;
     height: 100%;
-    overflow-y: scroll;
-    /* Enable scrolling */
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-    scroll-snap-type: y mandatory;
-}
-
-.html::-webkit-scrollbar {
-    display: none;
-    /* Safari and Chrome */
+    overflow-y: hidden;
 }
 
 .body {
@@ -22,13 +13,20 @@
     color: #ffffff;
 }
 
-.section {
+.hidden {
+    opacity: 0.5;
+}
+
+/////////////////////
+
+// Each section
+.sections {
     display: flex;
     flex-direction: column;
     height: 100dvh;
-    scroll-snap-align: start;
 }
 
+//Home
 .home {
     flex-grow: 1;
     display: flex;
@@ -43,9 +41,9 @@
 }
 
 .welcome {
-    color: #ffffff9c;
-    font-size: 1.2rem;
-    font-weight: 600;
+    color: #579be9;
+    font-size: $welcome-txt-size;
+    font-weight: $welcome-txt-weight;
     margin: 0;
 }
 
@@ -57,23 +55,24 @@
 }
 
 .title {
-    font-size: 4rem;
+    font-family: $font-stack;
+    font-size: $title-home-size;
+    font-family: $title-home-weight;
     margin: 15px 0;
 }
 
 .txt {
-    color: #ffffff9c;
+    color: $body-text-color;
     margin: 0;
     margin-bottom: 20px;
-    font-weight: 500;
-    font-size: 1rem;
+    font-size: $body-text-size;
 }
 
 .thanks {
-    color: #ffffff9c;
+    color: $body-text-color;
     margin: 0;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: $body-text-size;
 }
 
 .imgBox {
@@ -92,21 +91,77 @@
     bottom: 0;
 }
 
-.angles {
+// ArrowUp
+.arrowUp {
     position: absolute;
     align-self: center;
-    bottom: 1rem;
-    font-size: 1.5rem;
+    top: 0;
+    font-size: 1.3rem;
+    animation: bounceUp 2s infinite;
+    transition: 1s ease;
+    padding: 5px 10px 10px 10px;
+}
+
+.arrowUp:hover {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+@keyframes bounceUp {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(15px);
+    }
+
+    60% {
+        transform: translateY(8px);
+    }
+}
+
+// ArrowDOWN
+.arrowDown {
+    position: absolute;
+    align-self: center;
+    bottom: 0;
+    font-size: 1.3rem;
+    animation: bounce 2s infinite;
+    transition: 1s ease;
+    padding: 10px 10px 5px 10px;
+}
+
+.arrowDown:hover {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-15px);
+    }
+
+    60% {
+        transform: translateY(-8px);
+    }
 }
 
 // Projects Section
-
-.projectsSection {
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
-    scroll-snap-align: start;
-}
 
 .projectsIntro {
     margin: 2rem;
@@ -114,8 +169,10 @@
 }
 
 .projectsTitle {
-    font-size: 2.5rem;
+    font-family: $font-stack;
+    font-size: $section-title-size;
     margin: 0;
+    margin-top: $section-title-mt;
 }
 
 .projects {
@@ -133,6 +190,7 @@
     background: #4e4e4e;
     border-radius: 10px;
     /* Red background for the track */
+    cursor: pointer;
 }
 
 /* Customize the scrollbar thumb (draggable part) */
@@ -141,6 +199,7 @@
     /* Blue color for the thumb */
     border-radius: 10px;
     /* Rounded corners for the thumb */
+    cursor: grab;
 }
 
 /* Customize the scrollbar itself */
@@ -153,19 +212,23 @@
 
 // About section
 
-.about {
-    display: flex;
-    flex-direction: column;
-    height: 100dvh;
-    scroll-snap-align: start;
-}
-
 .aboutIntro {
     margin: 2rem;
     align-self: center;
 }
 
 .aboutTitle {
-    font-size: 2.5rem;
+    font-family: $font-stack;
+    font-size: $section-title-size;
     margin: 0;
+    margin-top: $section-title-mt;
+}
+
+// Contact Section
+.contactContainer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

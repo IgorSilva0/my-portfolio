@@ -1,3 +1,5 @@
+@import '../../styles/variables.module';
+
 .about {
     flex-grow: 1;
     display: flex;
@@ -23,22 +25,17 @@
 
 .aboutContent {
     width: 40vw;
-    margin-bottom: 3rem;
+    align-self: flex-start;
+    margin-top: $about-text-box-mt;
 }
 
 .aboutContent h3 {
     margin: 24px 10px;
-    font-size: 1.5rem;
+    font-size: $about-h3-size;
 }
 
 .aboutContent p {
-    font-size: 1.1rem;
-    color: #d6d6d6;
+    font-size: $body-text-size;
+    color: $body-text-color;
     margin: 10px;
-}
-
-.location {
-    margin: 0;
-    font-size: 1rem;
-    color: #8d8d8d;
 }

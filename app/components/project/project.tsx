@@ -38,7 +38,7 @@ import { motion } from 'framer-motion';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 2 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
 export default function Project({imgs, quote}: any) {

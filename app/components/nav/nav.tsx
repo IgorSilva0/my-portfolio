@@ -9,7 +9,16 @@ const fadeInDown = {
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
-const Nav = () => {
+const Nav = ({setCurrent}:any) => {
+
+    const handleClick = (section:string) =>{
+        setCurrent(section)
+        setTimeout(()=>{
+            const element = document.querySelector(`#${section}`)
+            element!.scrollIntoView({ behavior: "smooth" })
+        })
+    }
+
     return (
         <motion.div
             initial="hidden"
@@ -25,9 +34,9 @@ const Nav = () => {
             </div>
             <Image className={styles.signature} src={'/imgs/signatureWhite.png'} alt='Signature Png' width={140} height={60}/>
             <div className={styles.btns}>
-            <Link href={'#projects'}><button>PROJECTS</button></Link> 
-            <Link href={'#about'}><button>ABOUT</button></Link>  
-            <Link href={'/'}><button>CONTACT</button></Link> 
+            <a onClick={()=>handleClick('mywork')}><button>MY WORK</button></a> 
+            <a onClick={()=>handleClick('about')}><button>ABOUT</button></a>  
+            <a onClick={()=>handleClick('contact')}><button>CONTACT</button></a> 
             </div>
         </nav>
         </motion.div>
