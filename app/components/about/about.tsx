@@ -2,6 +2,7 @@
 import styles from './styles.module.scss'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Stack from '../stack/stack'
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -10,6 +11,7 @@ const fadeInUp = {
 
 export default function About() {
   return (
+    <>
     <motion.div
       initial="hidden"
       whileInView="visible"
@@ -33,6 +35,9 @@ export default function About() {
             Beyond my professional life, I enjoy engaging in DIY projects, particularly those involving cars. I have a knack for researching and solving computer issues, and I find great satisfaction in building and fixing systems. My love for technology extends beyond the screen, into any project where I can apply my technical skills.
         </p>
       </div>
+      
     </motion.div>
+    <Stack/>
+    </>
   );
 }

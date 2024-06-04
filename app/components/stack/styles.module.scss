@@ -1,0 +1,101 @@
+.swiper {
+    width: 60%;
+    height: 40px;
+    margin-bottom: 5rem;
+    padding: 15px 5rem;
+    background: linear-gradient(to right, #ffffff00, #000000a4, #ffffff00);
+    // box-shadow: 0 3px 5px #000000;
+}
+
+.swiperSlide {
+    text-align: center;
+    font-size: 30px;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 10px;
+    padding-right: 80px;
+    margin-right: 0px !important;
+}
+
+.stack {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/// Icons ///
+
+.SiNextdotjs {
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 100%;
+    border: 1px solid #ffffff;
+}
+
+.SiTailwindcss {
+    color: #30c4ff;
+}
+
+.SiDaisyui {
+    padding: 0 1px;
+    background: linear-gradient(45deg, #ff0000, #003cff);
+    border-radius: 100%;
+}
+
+.SiTerraform {
+    color: #2369ff;
+}
+
+.SiSupabase {
+    color: #0ee20e;
+}
+
+.SiTypescript {
+    color: #008cff;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+.SiPlaywright {
+    color: #0ee20e;
+}
+
+.SiJavascript {
+    color: #f1e211;
+    border-radius: 3px;
+}
+
+.SiCss3 {
+    color: #3091ff;
+}
+
+.SiSass {
+    color: #e372ff;
+}
+
+.SiReact {
+    color: #30c4ff;
+}
+
+.SiHtml5 {
+    color: #ffa600;
+}
+
+.SiGit {
+    color: #ffa600;
+}
+
+.SiNodedotjs {
+    color: #20e420;
+}
+
+.SiJest {
+    color: #fd6500;
+}
+
+.SiSwiper {
+    color: #279eff;
+}

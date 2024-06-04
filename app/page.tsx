@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FaAnglesDown } from "react-icons/fa6";
 import Image from 'next/image';
 import Nav from './components/nav/nav';
-import Project from './components/carousel/carousel';
+import Project from './components/project/project';
 import About from './components/about/about';
 import { SoCImgs, SoCQuote } from '@/public/imgs/SoCBrain/imgs';
 import { GCImgs, GCQuote } from '@/public/imgs/GamingCombo/imgs';

@@ -19,9 +19,9 @@ const Nav = () => {
         >
         <nav className={styles.navBar}>
             <div className={styles.socials}>
-            <Link href={'/'}><FaLinkedin className={styles.icons}/></Link> 
-            <Link href={'/'}><FaInstagram className={styles.icons}/></Link>
-            <Link href={'/'}><FaGithub className={styles.icons}/></Link>
+            <Link href={'https://www.linkedin.com/in/igor-silva-455362297/'} target='_blank'><FaLinkedin className={styles.icons}/></Link> 
+            <Link href={'https://www.instagram.com/igor.honoratoo'} target='_blank'><FaInstagram className={styles.icons}/></Link>
+            <Link href={'https://github.com/IgorSilva0'} target='_blank'><FaGithub className={styles.icons}/></Link>
             </div>
             <Image className={styles.signature} src={'/imgs/signatureWhite.png'} alt='Signature Png' width={140} height={60}/>
             <div className={styles.btns}>

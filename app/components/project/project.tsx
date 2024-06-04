@@ -1,14 +1,14 @@
-'use client'
-import React, { useRef, useState } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 
 import { SiNextdotjs, SiVercel, SiTailwindcss,
-         SiDaisyui, SiTerraform, SiSupabase,
-         SiTypescript, SiReact, SiJavascript, 
-         SiPlaywright, SiSwr, SiCss3, SiPostgresql,
-         SiSass, SiGithubactions
-        } from "react-icons/si";
+  SiDaisyui, SiTerraform, SiSupabase,
+  SiTypescript, SiReact, SiJavascript, 
+  SiPlaywright, SiSwr, SiCss3, SiPostgresql,
+  SiSass, SiGithubactions, SiHtml5, SiGit,
+  SiNodedotjs, SiExpress, SiJest
+ } from "react-icons/si";
 
 const iconComponents:any = {
   'SiNextdotjs': SiNextdotjs,
