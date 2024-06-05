@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Nav from './components/nav/nav';
 import Project from './components/project/project';
 import About from './components/about/about';
+import Contact from './components/contact/contact';
 import { SoCImgs, SoCQuote } from '@/public/imgs/SoCBrain/imgs';
 import { GCImgs, GCQuote } from '@/public/imgs/GamingCombo/imgs';
 import { CImgs, CQuote } from '@/public/imgs/Countries/imgs';
@@ -110,15 +111,15 @@ const Home = () => {
       </section>
       <section className={current === 'contact' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='contact'>
         {current === 'contact' ? <FaAnglesUp className={styles.arrowUp} style={{ opacity: arrowVisible }} onClick={()=>handleClick('about')}/> : null}
-        <div className={styles.contactContainer}>
-          <h1>Contact section under construction... 🤖</h1>
-          <p>Email : igorsilvauk@gmail.com </p>
-          <p>Phone : 07748122933 </p>
-          <p>Based in Cheshire - UK</p>
-          <a href='https://imgur.com/a/cv-draft-lqbesXc' target='_blank'>Link to my CV (draft)</a>
-          <p className={styles.thankYou}>Thank you for visiting my Portfolio!</p>
-          <p>Click the icon below to scroll back to the top of the page!</p>
-        </div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInDown} className={styles.contactIntro}
+        > 
+          <h1 className={styles.contactTitle}>Contact</h1>
+        </motion.div>
+        <Contact/>
         {current === 'contact' ? <GiReturnArrow className={styles.arrowDown} style={{ opacity: arrowVisible, fontSize: '5rem' }} onClick={()=>handleClick('home')}/> : null}
       </section>
     </>

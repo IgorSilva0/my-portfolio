@@ -38,9 +38,10 @@ export default function Stack() {
         spaceBetween={10}
         grabCursor={true}
         autoplay={{
-          delay: 5000, // adjust the delay as needed
+          delay: 100, // No initial delay
           disableOnInteraction: false,
         }}
+        speed={3500} // Slide transition duration in milliseconds (2 seconds in this case)
         breakpoints={{
           640: {
             slidesPerView: 2,

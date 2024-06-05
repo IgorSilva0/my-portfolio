@@ -225,30 +225,14 @@
 }
 
 // Contact Section
-.contactContainer {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.contactIntro {
+    margin: 2rem;
+    align-self: center;
 }
 
-.contactContainer h1 {
-    box-shadow: 0 120px 500px #ffffff;
-}
-
-.contactContainer a {
-    font-size: 1.5rem;
-    color: chartreuse;
-}
-
-.thankYou {
-    font-size: 2rem;
-    /* Adjust as needed */
-    font-weight: bold;
-    /* Adjust as needed */
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-    -webkit-background-clip: text;
-    color: transparent;
-    background-clip: text;
+.contactTitle {
+    font-family: $font-stack;
+    font-size: $section-title-size;
+    margin: 0;
+    margin-top: $section-title-mt;
 }
