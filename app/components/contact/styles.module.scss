@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75vw;
     height: 80vh;
     margin: 0 auto;
 }
@@ -12,10 +11,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: fit-content;
     height: 60%;
     background: linear-gradient(145deg, #1B263B, #000000);
-    box-shadow: 0px 0px 50px #579be969;
+    box-shadow: 0px 0px 50px #579be950;
     border-radius: 10px;
 }
 
@@ -25,20 +24,21 @@
 
 .codeBox pre {
     height: 100%;
-    padding: 0 20px !important;
+    padding: 0 1.5rem !important;
     margin: 0 !important;
     background-color: transparent !important;
     background: linear-gradient(145deg, #000000, #1B263B) !important;
     border-radius: 0 10px 10px 0;
-    box-shadow: 0px 0px 50px #00fcc53d !important;
+    box-shadow: 0px 0px 50px #00fcc52d !important;
 }
 
 .codeBox span {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .info {
     margin: auto 2rem;
+    text-align: center;
 }
 
 .info h1 {

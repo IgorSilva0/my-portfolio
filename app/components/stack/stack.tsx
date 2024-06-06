@@ -6,7 +6,7 @@ import { SiNextdotjs, SiVercel, SiTailwindcss,
     SiPlaywright, SiSwr, SiCss3, SiPostgresql,
     SiSass, SiGithubactions, SiHtml5, SiGit,
     SiNodedotjs, SiExpress, SiJest, SiFramer,
-    SiSwiper
+    SiSwiper, SiFigma
    } from "react-icons/si";
 
 // Import Swiper styles
@@ -82,7 +82,7 @@ export default function Stack() {
         <SwiperSlide className={styles.swiperSlide}><SiSass className={styles.SiSass}/><a>Sass</a></SwiperSlide>
         <SwiperSlide className={styles.swiperSlide}><SiGithubactions className={styles.SiGithubactions}/><a>GH.Actions</a></SwiperSlide>
         <SwiperSlide className={styles.swiperSlide}><SiHtml5 className={styles.SiHtml5}/><a>Html</a></SwiperSlide>
-        
+        <SwiperSlide className={styles.swiperSlide}><SiFigma className={styles.SiFigma}/><a>Figma</a></SwiperSlide>
       </Swiper>
     </motion.div>
   );

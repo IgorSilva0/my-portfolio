@@ -5,6 +5,7 @@ import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { motion } from 'framer-motion';
+import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -13,21 +14,25 @@ const fadeInUp = {
 
 export default function Contact(){
   const codeString = `
-  1 import { FC } from "react";
-  2
-  3 type WishlistProps = {
-  4  wish: "job opportunities" | "learning resources" | "challenging tasks";
-  5 };
-  6
-  7 const JuniorDevWishlist: FC<WishlistProps> = ({ wish }) => (
-  8  <>
-  9    <h2>Junior Dev Wishlist</h2>
-  10    <p>Wishes: {wish}</p>
-  11  </>
-  12 );
-  13
-  14 export default JuniorDevWishlist;
-  `;
+import { FC } from "react";
+
+type List = {
+  wish:
+      "job opportunities" |
+      "learning resources"| 
+      "challenging tasks";
+};
+
+const MyWishlist: FC<List> = ({ wish }) => (
+  <>
+    <h2>Igor's Wishlist</h2>
+    <p>Wishes: {wish}</p>
+  </>
+);
+  
+export default MyWishlist;
+
+`;
   
   return (
     <motion.div
@@ -39,11 +44,10 @@ export default function Contact(){
         <div className={styles.contactInfo}>
             <div className={styles.info}>
                 <h1>Contact section under construction... 🤖</h1>
-                <p>Email : igorsilvauk@gmail.com </p>
-                <p>Phone : 07748122933 </p>
-                <p>Based in Cheshire - UK</p>
+                <p><MdEmail/> igorsilvauk@gmail.com </p>
+                <p><MdPhone/> +44 07748122933 </p>
+                <p><MdLocationOn/> Cheshire - UK</p>
                 <a href='https://imgur.com/a/cv-draft-lqbesXc' target='_blank'>Link to my CV (draft)</a>
-                <p className={styles.thankYou}>Thank you for visiting my Portfolio!</p>
             </div>
         </div>
         <div className={styles.codeBox}>
