@@ -120,7 +120,7 @@ const Home = () => {
           <h1 className={styles.contactTitle}>Contact</h1>
         </motion.div>
         <Contact/>
-        {current === 'contact' ? <GiReturnArrow className={styles.arrowDown} style={{ opacity: arrowVisible, fontSize: '5rem' }} onClick={()=>handleClick('home')}/> : null}
+        {current === 'contact' ? <GiReturnArrow className={styles.arrowDown} style={{ opacity: arrowVisible, fontSize: '2rem' }} onClick={()=>handleClick('home')}/> : null}
       </section>
     </>
   );
