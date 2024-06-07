@@ -40,9 +40,9 @@
 
 .info {
     margin: auto 2rem;
-    text-align: center;
-    width: 25vw;
+    width: fit-content;
     height: fit-content;
+    padding: 0 2rem;
 }
 
 .info h1 {
@@ -52,13 +52,11 @@
 
 .info p {
     font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
+
 }
 
 .info p a {
     display: flex;
-    justify-content: center;
     gap: 0.5rem;
 }
 
@@ -74,9 +72,6 @@
 
 
 .cv {
-    display: flex;
-    justify-content: center;
-    align-self: center;
     background-color: transparent;
     color: #ffffff;
     text-decoration: none;
@@ -84,7 +79,7 @@
     border-radius: 5px;
     border: 1px solid #ffffff;
     font-size: 1.2rem;
-    width: 40%;
+    width: fit-content;
 }
 
 .cv:hover {
