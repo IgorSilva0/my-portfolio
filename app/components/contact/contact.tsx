@@ -6,6 +6,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { motion } from 'framer-motion';
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa6";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -25,7 +26,7 @@ type List = {
 
 const MyWishlist: FC<List> = ({ wish }) => (
   <>
-    <h2>Igor's Wishlist</h2>
+    <h2>Igor&apos;s Wishlist</h2>
     <p>Wishes: {wish}</p>
   </>
 );
@@ -43,11 +44,45 @@ export default MyWishlist;
     >
         <div className={styles.contactInfo}>
             <div className={styles.info}>
-                <h1>Contact section under construction... 🤖</h1>
-                <p><MdEmail/> igorsilvauk@gmail.com </p>
-                <p><MdPhone/> +44 07748122933 </p>
-                <p><MdLocationOn/> Cheshire - UK</p>
-                <a href='https://imgur.com/a/cv-draft-lqbesXc' target='_blank'>Link to my CV (draft)</a>
+                <h1>Get in Touch</h1>
+                <p>
+                    <a href="mailto:igorsilvauk@gmail.com">
+                        <MdEmail /> igorsilvauk@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <a href="tel:+4407748122933">
+                        <MdPhone /> +44 07748122933
+                    </a>
+                </p>
+                <p>
+                    <a 
+                        href="https://www.google.com/maps/place/Knutsford/@53.3003858,-2.3937703,14z/data=!3m1!4b1!4m6!3m5!1s0x487a510bd8c2a3f9:0x147a9ae5b7b7fd59!8m2!3d53.3005939!4d-2.371833!16zL20vMDE0Yjgz?entry=ttu" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <MdLocationOn /> Cheshire - UK
+                    </a>
+                </p>
+                <p>
+                    <a 
+                        href="https://www.linkedin.com/in/igor-silva-455362297/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <FaLinkedin /> Igor Silva
+                    </a>
+                </p>
+                <p> 
+                  <a 
+                  className={styles.cv} 
+                  href='/cv/IgorSilva.pdf' 
+                  target='_blank' 
+                  rel="noopener noreferrer"
+                  >
+                    View My CV
+                  </a>
+                </p>
             </div>
         </div>
         <div className={styles.codeBox}>
