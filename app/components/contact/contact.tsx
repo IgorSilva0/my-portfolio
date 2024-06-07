@@ -73,7 +73,7 @@ export default MyWishlist;
                         <FaLinkedin /> Igor Silva
                     </a>
                 </p>
-                <p> 
+                <p className={styles.btn}> 
                   <a 
                   className={styles.cv} 
                   href='/cv/IgorSilva.pdf' 
