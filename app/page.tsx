@@ -12,6 +12,7 @@ import { SoCImgs, SoCQuote } from '@/public/imgs/SoCBrain/imgs';
 import { GCImgs, GCQuote } from '@/public/imgs/GamingCombo/imgs';
 import { CImgs, CQuote } from '@/public/imgs/Countries/imgs';
 import { useEffect, useState } from 'react';
+import NavMobile from './components/nav/navMobile';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -58,6 +59,7 @@ const Home = () => {
     <>
       <section className={current === 'home' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='home'>
         <Nav setCurrent={setCurrent}/>
+        <NavMobile/>
         <motion.div
             initial="hidden"
             whileInView="visible"

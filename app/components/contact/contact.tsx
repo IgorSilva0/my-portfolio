@@ -74,8 +74,7 @@ export default MyWishlist;
                     </a>
                 </p>
                 <p className={styles.btn}> 
-                  <a 
-                  className={styles.cv} 
+                  <a  
                   href='/cv/IgorSilva.pdf' 
                   target='_blank' 
                   rel="noopener noreferrer"
