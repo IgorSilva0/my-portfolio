@@ -1,10 +1,16 @@
 @import '../../styles/variables.module';
+@import '../../styles/breakpoints';
 
 .swiper {
     width: 30vw;
     height: 300px;
     padding: 50px;
     margin: 0;
+
+    @include xs {
+        padding: 0 50px;
+        width: 70vw;
+    }
 }
 
 .swiperSlide {
@@ -26,27 +32,48 @@
     justify-content: center;
     align-items: center;
     gap: 5rem;
+
+    @include xs {
+        flex-direction: column;
+        gap: 0;
+    }
 }
 
 .quoteBox {
     padding: 10px;
     width: 30vw;
+
+    @include xs {
+        width: 90vw;
+    }
 }
 
 .quoteBox h3 {
     margin: 0;
     font-size: $project-intro-title;
+
+    @include xs {
+        font-size: 1.1;
+    }
 }
 
 .quoteBox p {
     color: $body-text-color;
     font-size: $body-text-size;
+
+    @include xs {
+        font-size: $body-mobile-text-size;
+    }
 }
 
 .btnsBox {
     padding-top: 1rem;
     display: flex;
     gap: 1.5rem;
+
+    @include xs {
+        padding-bottom: 1rem;
+    }
 }
 
 .btnsBox a {
@@ -57,6 +84,10 @@
     border-radius: 5px;
     border: 1px solid #ffffff;
     font-size: $body-text-size;
+
+    @include xs {
+        font-size: $body-mobile-text-size;
+    }
 }
 
 .btnsBox a:hover {

@@ -1,14 +1,20 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from './styles.module.scss'; // Import the SCSS file
+import Image from "next/image";
+import { FaGithub } from "react-icons/fa6";
+import Link from "next/link";
 
-export default function NavMobile() {
+export default function NavMobile({setCurrent}:any) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={styles.navbarmobile}>
-      <Menu isOpen={isOpen} />
+      <Menu isOpen={isOpen} setIsOpen={setIsOpen} setCurrent={setCurrent}/>
       <MenuToggle toggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
+      <Image src={'/imgs/signatureWhite.png'} width={100} height={50} alt="Signature Image"/>
+
+      <Link href={'https://github.com/IgorSilva0'} target='_blank'><FaGithub className={styles.icons}/></Link>
     </div>
   );
 }
@@ -41,7 +47,15 @@ const itemVariants = {
   closed: { opacity: 0, y: -20 },
 };
 
-const Menu = ({ isOpen }: { isOpen: boolean }) => {
+const Menu = ({ isOpen, setIsOpen, setCurrent }: any) => {
+  const handleClick = (section:string) =>{
+    setCurrent(section)
+    setIsOpen(!isOpen)
+    setTimeout(()=>{
+        const element = document.querySelector(`#${section}`)
+        element!.scrollIntoView({ behavior: "smooth" })
+    })
+}
   return (
     <AnimatePresence>
       {isOpen && (
@@ -53,11 +67,15 @@ const Menu = ({ isOpen }: { isOpen: boolean }) => {
           variants={menuVariants}
         >
           <motion.ul>
-            {["Portfolio", "About", "Contact", "Search"].map((item) => (
-              <motion.li key={item} variants={itemVariants}>
-                {item}
-              </motion.li>
-            ))}
+            <motion.li variants={itemVariants}>
+              <a onClick={()=>handleClick('mywork')}>My Work</a>
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              <a onClick={()=>handleClick('about')}>About</a>
+            </motion.li>
+            <motion.li variants={itemVariants}>
+              <a onClick={()=> handleClick('contact')}>Contact</a>
+            </motion.li>
           </motion.ul>
         </motion.nav>
       )}
@@ -74,6 +92,7 @@ const MenuToggle = ({ toggle, isOpen }: { toggle: () => void, isOpen: boolean })
         strokeWidth="3"
         strokeLinecap="round"
         animate={isOpen ? { d: "M 3 16.5 L 17 2.5" } : { d: "M 2 2.5 L 20 2.5" }}
+        initial={false}
       />
       <motion.path
         d="M 2 9.423 L 20 9.423"
@@ -81,6 +100,7 @@ const MenuToggle = ({ toggle, isOpen }: { toggle: () => void, isOpen: boolean })
         strokeWidth="3"
         strokeLinecap="round"
         animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+        initial={false}
       />
       <motion.path
         d="M 2 16.346 L 20 16.346"
@@ -88,6 +108,7 @@ const MenuToggle = ({ toggle, isOpen }: { toggle: () => void, isOpen: boolean })
         strokeWidth="3"
         strokeLinecap="round"
         animate={isOpen ? { d: "M 3 2.5 L 17 16.5" } : { d: "M 2 16.346 L 20 16.346" }}
+        initial={false}
       />
     </svg>
   </button>

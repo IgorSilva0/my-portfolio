@@ -1,4 +1,5 @@
 @import '../../styles/variables.module';
+@import '../../styles//breakpoints';
 
 .about {
     flex-grow: 1;
@@ -6,6 +7,11 @@
     align-items: center;
     justify-content: center;
     gap: 7rem;
+
+    @include xs {
+        flex-direction: column;
+        gap: 0;
+    }
 }
 
 .imgBox {
@@ -16,6 +22,10 @@
     background: linear-gradient(145deg, #1B263B, #000000);
     box-shadow: 150px 0px 300px #579be983, 5px 5px 10px #000000;
     margin-bottom: 2rem;
+
+    @include xs {
+        display: none;
+    }
 }
 
 .img {
@@ -25,16 +35,29 @@
 
 .aboutContent {
     width: 40%;
+
     //margin-top: $about-text-box-mt;
+    @include xs {
+        width: 98vw;
+    }
 }
 
 .aboutContent h3 {
     margin: 24px 10px;
     font-size: $about-h3-size;
+
+    @include xs {
+        font-size: 1.2rem;
+        margin: 0 10px;
+    }
 }
 
 .aboutContent p {
     font-size: $body-text-size;
     color: $body-text-color;
     margin: 10px;
+
+    @include xs {
+        font-size: $body-mobile-text-size;
+    }
 }

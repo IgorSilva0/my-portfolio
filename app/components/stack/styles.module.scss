@@ -1,4 +1,5 @@
 @import '../../styles/variables.module';
+@import '../../styles/breakpoints';
 
 .swiper {
     width: 65%;
@@ -7,7 +8,14 @@
     margin-bottom: 5rem;
     padding: 10px 5rem;
     background: linear-gradient(to right, #ffffff00, #000000a4, #ffffff00);
+
     // box-shadow: 0 3px 5px #000000;
+    @include xs {
+        margin-top: 0;
+        padding: 0;
+        width: 80vw;
+        height: 45px;
+    }
 }
 
 .swiperSlide {
@@ -23,11 +31,22 @@
     width: 10px;
     padding-right: 80px;
     margin-right: 0px !important;
+
+    @include xs {
+        justify-content: flex-start;
+        padding-right: 10px;
+        height: 45px;
+    }
 }
 
 .swiperSlide a {
     font-size: $tool-name-size;
     margin-top: 10px;
+
+    @include xs {
+        margin-top: 1px;
+        font-size: 0.8rem;
+    }
 }
 
 /// Icons ///

@@ -6,7 +6,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { motion } from 'framer-motion';
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 20 },

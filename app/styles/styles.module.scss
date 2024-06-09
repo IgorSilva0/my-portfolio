@@ -34,11 +34,23 @@
     align-items: center;
     justify-content: center;
     gap: 7rem;
+
+    @include xs {
+        flex-direction: column;
+        gap: 3rem;
+    }
 }
 
 .intro {
     max-width: 35vw;
     margin-bottom: 7rem;
+
+    @include xs {
+        max-width: 100vw;
+        padding: 10px;
+        margin: 1rem;
+        text-align: center;
+    }
 }
 
 .welcome {
@@ -46,6 +58,10 @@
     font-size: $welcome-txt-size;
     font-weight: $welcome-txt-weight;
     margin: 0;
+
+    @include xs {
+        font-size: 1rem;
+    }
 }
 
 .name {
@@ -60,6 +76,10 @@
     font-size: $title-home-size;
     font-family: $title-home-weight;
     margin: 15px 0;
+
+    @include xs {
+        font-size: 2.5rem;
+    }
 }
 
 .txt {
@@ -67,6 +87,10 @@
     margin: 0;
     margin-bottom: 20px;
     font-size: $body-text-size;
+
+    @include xs {
+        font-size: $body-mobile-text-size;
+    }
 }
 
 .thanks {
@@ -74,6 +98,10 @@
     margin: 0;
     font-weight: 500;
     font-size: $body-text-size;
+
+    @include xs {
+        display: none;
+    }
 }
 
 .imgBox {
@@ -183,6 +211,10 @@
     width: 80vw;
     overflow-y: scroll;
     margin-bottom: 3rem;
+
+    @include xs {
+        width: 100vw;
+    }
 }
 
 /* Customize the scrollbar track */

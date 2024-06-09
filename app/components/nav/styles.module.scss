@@ -36,6 +36,10 @@
     font-size: x-large;
     color: #ffffff;
     border-radius: 10px;
+
+    @include xs {
+        padding-right: 5px;
+    }
 }
 
 .navBar button {
@@ -62,14 +66,13 @@
 /* styles.scss */
 
 .navbarmobile {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-    background-color: #333;
+    width: 90vw;
     color: white;
     z-index: 1000;
-    padding: 15px 20px;
+    padding: 15px 20px 0 20px;
     display: none;
     justify-content: space-between;
     align-items: center;
@@ -80,17 +83,25 @@
     }
 }
 
+.navbarmobile img {
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .menu {
     position: fixed;
     top: 60px;
     /* Adjust based on the height of your navbar */
     left: 0;
-    width: 100%;
-    background-color: #333;
+    width: 40%;
+    background-color: #356296;
     color: white;
     z-index: 1000;
-    padding: 20px 0;
+    padding: 0;
     text-align: center;
+    border-radius: 0 5px 5px 0;
 }
 
 .menu ul {

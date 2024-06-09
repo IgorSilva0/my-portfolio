@@ -59,7 +59,7 @@ const Home = () => {
     <>
       <section className={current === 'home' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='home'>
         <Nav setCurrent={setCurrent}/>
-        <NavMobile/>
+        <NavMobile setCurrent={setCurrent}/>
         <motion.div
             initial="hidden"
             whileInView="visible"
