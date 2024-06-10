@@ -6,6 +6,11 @@
     margin: 0;
     height: 100%;
     overflow-y: hidden;
+
+    @include xs {
+        scroll-snap-type: y mandatory;
+        overflow-y: visible;
+    }
 }
 
 .body {
@@ -16,6 +21,10 @@
 
 .hidden {
     opacity: 0.5;
+
+    @include xs {
+        opacity: 1;
+    }
 }
 
 /////////////////////
@@ -25,6 +34,10 @@
     display: flex;
     flex-direction: column;
     height: 100dvh;
+
+    @include xs {
+        scroll-snap-align: start;
+    }
 }
 
 //Home
@@ -129,6 +142,10 @@
     animation: bounceUp 2s infinite;
     transition: 1s ease;
     padding: 5px 10px 10px 10px;
+
+    @include xs {
+        display: none;
+    }
 }
 
 .arrowUp:hover {
@@ -164,6 +181,10 @@
     animation: bounce 2s infinite;
     transition: 1s ease;
     padding: 10px 10px 5px 10px;
+
+    @include xs {
+        display: none;
+    }
 }
 
 .arrowDown:hover {
