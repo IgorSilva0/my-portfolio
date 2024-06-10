@@ -14,6 +14,7 @@ import { CImgs, CQuote } from '@/public/imgs/Countries/imgs';
 import { useEffect, useState } from 'react';
 import NavMobile from './components/nav/navMobile';
 
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },

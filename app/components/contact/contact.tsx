@@ -7,6 +7,8 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { motion } from 'framer-motion';
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
+import { BiHomeHeart } from "react-icons/bi";
+
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -35,6 +37,15 @@ export default MyWishlist;
 
 `;
   
+  const handleClick = (section: string) => {
+    setTimeout(() => {
+      const element = document.querySelector(`#${section}`);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   return (
     <motion.div
       initial="hidden"
@@ -89,6 +100,7 @@ export default MyWishlist;
                 {codeString}
             </SyntaxHighlighter>
         </div>
+        <BiHomeHeart className={styles.returnHome} onClick={()=>handleClick('home')}/>
     </motion.div>
   );
 }
