@@ -13,6 +13,7 @@ import { GCImgs, GCQuote } from '@/public/imgs/GamingCombo/imgs';
 import { CImgs, CQuote } from '@/public/imgs/Countries/imgs';
 import { useEffect, useState } from 'react';
 import NavMobile from './components/nav/navMobile';
+import { BiHomeHeart } from "react-icons/bi";
 
 
 const fadeInUp = {
@@ -123,6 +124,7 @@ const Home = () => {
           <h1 className={styles.contactTitle}>Contact</h1>
         </motion.div>
         <Contact/>
+        <BiHomeHeart className={styles.returnHome} onClick={()=>handleClick('home')}/>
         {current === 'contact' ? <GiReturnArrow className={styles.arrowDown} style={{ opacity: arrowVisible, fontSize: '2rem' }} onClick={()=>handleClick('home')}/> : null}
       </section>
     </>

@@ -37,6 +37,7 @@
 
     @include xs {
         scroll-snap-align: start;
+        scroll-snap-stop: always;
     }
 }
 
@@ -321,5 +322,36 @@
     @include xs {
         margin-top: 0.5rem;
         font-size: 2rem;
+    }
+}
+
+.returnHome {
+    display: none;
+
+    @include xs {
+        display: inline;
+        align-self: center;
+        font-size: 1.5rem;
+        animation: pulse 2s infinite;
+        transition: 1s ease;
+        padding: 10px 10px 5px 10px;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
     }
 }

@@ -8,6 +8,10 @@
     align-items: center;
     height: 80dvh;
     margin: 0 auto;
+
+    @include xs {
+        height: 80dvh;
+    }
 }
 
 .contactInfo {
@@ -103,37 +107,4 @@
     background-color: #3191ff;
     box-shadow: 0 0 5px #ffffff;
     transition: 0.2s ease-in;
-}
-
-.returnHome {
-    display: none;
-
-    @include xs {
-        display: inline;
-        bottom: 5%;
-        position: absolute;
-        align-self: center;
-        font-size: 1.5rem;
-        animation: pulse 2s infinite;
-        transition: 1s ease;
-        padding: 10px 10px 5px 10px;
-    }
-}
-
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-
-    50% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 0.8;
-    }
 }

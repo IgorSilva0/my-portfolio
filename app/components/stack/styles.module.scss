@@ -1,6 +1,11 @@
 @import '../../styles/variables.module';
 @import '../../styles/breakpoints';
 
+.stack {
+    display: flex;
+    justify-content: center;
+}
+
 .swiper {
     width: 65%;
     height: 65px;
