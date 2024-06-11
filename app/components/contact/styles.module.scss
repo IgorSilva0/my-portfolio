@@ -60,6 +60,10 @@
 .info h1 {
     margin-top: 0;
     margin-bottom: 3rem;
+
+    @include xs {
+        font-size: 1.4rem;
+    }
 }
 
 .info p {

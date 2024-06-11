@@ -50,6 +50,7 @@
 
     @include xs {
         flex-direction: column;
+        justify-content: flex-start;
         gap: 3rem;
     }
 }
@@ -91,7 +92,7 @@
     margin: 15px 0;
 
     @include xs {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 
@@ -126,6 +127,10 @@
     background: linear-gradient(145deg, #1B263B, #000000);
     box-shadow: -150px 0px 300px #579be983, 5px 5px 10px #000000;
     margin-bottom: 2rem;
+
+    @include xs {
+        margin-bottom: 0;
+    }
 }
 
 .img {
@@ -217,6 +222,10 @@
 .projectsIntro {
     margin: 2rem;
     align-self: center;
+
+    @include xs {
+        margin: 1rem;
+    }
 }
 
 .projectsTitle {
@@ -224,6 +233,11 @@
     font-size: $section-title-size;
     margin: 0;
     margin-top: $section-title-mt;
+
+    @include xs {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+    }
 }
 
 .projects {
@@ -270,6 +284,10 @@
 .aboutIntro {
     margin: 2rem;
     align-self: center;
+
+    @include xs {
+        margin: 1rem;
+    }
 }
 
 .aboutTitle {
@@ -277,12 +295,21 @@
     font-size: $section-title-size;
     margin: 0;
     margin-top: $section-title-mt;
+
+    @include xs {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+    }
 }
 
 // Contact Section
 .contactIntro {
     margin: 2rem;
     align-self: center;
+
+    @include xs {
+        margin: 1rem;
+    }
 }
 
 .contactTitle {
@@ -290,4 +317,9 @@
     font-size: $section-title-size;
     margin: 0;
     margin-top: $section-title-mt;
+
+    @include xs {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+    }
 }
