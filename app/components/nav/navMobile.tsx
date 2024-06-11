@@ -5,12 +5,12 @@ import Image from "next/image";
 import { FaGithub } from "react-icons/fa6";
 import Link from "next/link";
 
-export default function NavMobile({setCurrent}:any) {
+export default function NavMobile({setCurrent,setArrowVisible}:any) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className={styles.navbarmobile}>
-      <Menu isOpen={isOpen} setIsOpen={setIsOpen} setCurrent={setCurrent}/>
+      <Menu isOpen={isOpen} setIsOpen={setIsOpen} setCurrent={setCurrent} setArrowVisible={setArrowVisible}/>
       <MenuToggle toggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
       <Image src={'/imgs/signatureWhite.png'} width={100} height={50} alt="Signature Image"/>
 
@@ -47,14 +47,15 @@ const itemVariants = {
   closed: { opacity: 0, y: -20 },
 };
 
-const Menu = ({ isOpen, setIsOpen, setCurrent }: any) => {
+const Menu = ({ isOpen, setIsOpen, setCurrent, setArrowVisible }: any) => {
   const handleClick = (section:string) =>{
     setCurrent(section)
+    setArrowVisible(0)
     setIsOpen(!isOpen)
     setTimeout(()=>{
         const element = document.querySelector(`#${section}`)
-        element!.scrollIntoView({ behavior: "smooth" })
-    })
+        element!.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
+    }, 100)
 }
   return (
     <AnimatePresence>

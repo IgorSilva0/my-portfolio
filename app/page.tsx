@@ -35,7 +35,7 @@ const Home = () => {
     setTimeout(() => {
       const element = document.querySelector(`#${section}`);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
       }
     }, 100);
   };
@@ -60,8 +60,8 @@ const Home = () => {
   return (
     <>
       <section className={current === 'home' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='home'>
-        <Nav setCurrent={setCurrent}/>
-        <NavMobile setCurrent={setCurrent}/>
+        <Nav setCurrent={setCurrent} setArrowVisible={setArrowVisible}/>
+        <NavMobile setCurrent={setCurrent} setArrowVisible={setArrowVisible}/>
         <motion.div
             initial="hidden"
             whileInView="visible"
