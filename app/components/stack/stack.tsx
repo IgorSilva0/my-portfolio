@@ -8,7 +8,6 @@ import { SiNextdotjs, SiVercel, SiTailwindcss,
     SiNodedotjs, SiExpress, SiJest, SiFramer,
     SiSwiper, SiFigma
    } from "react-icons/si";
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
