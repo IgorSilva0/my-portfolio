@@ -15,7 +15,6 @@ import { useEffect, useState } from 'react';
 import NavMobile from './components/nav/navMobile';
 import { BiHomeHeart } from "react-icons/bi";
 
-
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
