@@ -55,7 +55,6 @@ const Home = () => {
       return () => clearInterval(intervalId); // Cleanup the interval on component unmount
   }, [current]);
 
-
   return (
     <>
       <section className={current === 'home' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='home'>
