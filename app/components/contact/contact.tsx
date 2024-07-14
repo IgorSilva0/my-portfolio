@@ -8,8 +8,6 @@ import { motion } from 'framer-motion';
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
 
-
-
 const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 1 } },
