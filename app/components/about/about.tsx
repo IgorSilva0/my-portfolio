@@ -35,7 +35,6 @@ export default function About() {
             Beyond my professional life, I enjoy engaging in DIY projects, particularly those involving cars. I have a knack for researching and solving computer issues, and I find great satisfaction in building and fixing systems. My love for technology extends beyond the screen, into any project where I can apply my technical skills.
         </p>
       </div>
-      
     </motion.div>
     <Stack/>
     </>
