@@ -92,4 +92,3 @@ export default MyWishlist;
     </motion.div>
   );
 }
-
