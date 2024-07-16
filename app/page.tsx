@@ -42,7 +42,7 @@ const Home = () => {
     let incrementValue = 0;
     const interval = 17; // Interval in milliseconds
     const maxIncrements = 100; // Number of increments
-    // la
+    
       const intervalId = setInterval(() => {
         setArrowVisible((prev) => prev + 0.01);
         incrementValue++;
