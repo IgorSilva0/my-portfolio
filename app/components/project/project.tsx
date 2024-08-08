@@ -7,7 +7,7 @@ import { SiNextdotjs, SiVercel, SiTailwindcss,
   SiTypescript, SiReact, SiJavascript, 
   SiPlaywright, SiSwr, SiCss3, SiPostgresql,
   SiSass, SiGithubactions, SiHtml5, SiGit,
-  SiNodedotjs, SiExpress, SiJest
+  SiNodedotjs, SiExpress, SiJest,SiSwiper
  } from "react-icons/si";
 
 const iconComponents:any = {
@@ -26,6 +26,7 @@ const iconComponents:any = {
   'SiPostgresql': SiPostgresql,
   'SiSass': SiSass,
   'SiGithubactions': SiGithubactions,
+  'SiSwiper': SiSwiper,
 };
 
 import 'swiper/css';

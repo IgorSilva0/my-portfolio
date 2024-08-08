@@ -1,5 +1,9 @@
 export const SoCImgs = [
     {
+    src: '/imgs/SoCBrain/admin1.png',
+    alt: 'SoCBrain App Image'
+    },
+    {
     src: '/imgs/SoCBrain/1.png',
     alt: 'SoCBrain App Image'
     },
@@ -39,10 +43,7 @@ export const SoCImgs = [
     src: '/imgs/SoCBrain/10.png',
     alt: 'SoCBrain App Image'
     },
-    {
-    src: '/imgs/SoCBrain/admin1.png',
-    alt: 'SoCBrain App Image'
-    },
+
     {
     src: '/imgs/SoCBrain/admin2.png',
     alt: 'SoCBrain App Image'
