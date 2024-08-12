@@ -92,9 +92,9 @@ const Home = () => {
         >
           <h1 className={styles.projectsTitle}>My Work</h1>
         </motion.div>
-        <div className={styles.projects}>
-          <Project imgs={CarRentalImgs} quote={CarRentalQuote} />
+        <div className={styles.projects}> 
           <Project imgs={SoCImgs} quote={SoCQuote} />
+          <Project imgs={CarRentalImgs} quote={CarRentalQuote} />
           <Project imgs={CImgs} quote={CQuote} />
           <Project imgs={GCImgs} quote={GCQuote} />
         </div>
