@@ -15,7 +15,7 @@ export const CarRentalImgs = [
 
 export const CarRentalQuote = {
     title: 'Advanced Car Rental Management System',
-    text: 'Discover the convenience and efficiency of our Car Rental App, built to streamline your travel needs with modern web development tools. With React/Next.js at its core, this project emphasizes scalability and smooth performance, ensuring a seamless experience from booking to car management. Explore intuitive features like real-time availability checks and secure user authentication, while our upcoming enhancements, including payment gateway integration and UI/UX upgrades, promise to elevate your journey. Ready to hit the road? Start your adventure with us and stay tuned for exciting updates, including travel tips to make the most of your rental experience!',
+    text: 'Streamline your travel with our Car Rental App, crafted with React and Next.js for reliable performance. Access real-time availability, secure login, and a responsive mobile design. Upcoming features like payment integration and UI/UX improvements will enhance your experience even further. Start your adventure now and stay tuned for more updates!',
     repo: 'https://github.com/IgorSilva0/Car-Rental',
     stack: ['SiNextdotjs', 'SiVercel', 'SiGithubactions', 'SiTailwindcss', 'SiSupabase', 'SiTypescript', 'SiSwiper'],
 }
