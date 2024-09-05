@@ -1,7 +1,6 @@
 'use client'
 import styles from './styles/styles.module.scss';
 import { motion } from 'framer-motion';
-import { FaAnglesDown, FaAnglesUp } from "react-icons/fa6";
 import { GiReturnArrow } from "react-icons/gi";
 import Image from 'next/image';
 import Nav from './components/nav/nav';
