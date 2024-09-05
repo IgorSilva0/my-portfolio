@@ -5,12 +5,10 @@
 .html {
     margin: 0;
     height: 100%;
-    overflow-y: hidden;
 
-    @include xs {
-        scroll-snap-type: y mandatory;
-        overflow-y: visible;
-    }
+    overflow-y: auto;
+
+    @include xs {}
 }
 
 .body {
@@ -35,10 +33,7 @@
     flex-direction: column;
     height: 100dvh;
 
-    @include xs {
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-    }
+    @include xs {}
 }
 
 //Home
@@ -250,7 +245,8 @@
     margin-bottom: 3rem;
 
     @include xs {
-        width: 100dvw;
+        width: 99dvw;
+        overflow-x: hidden;
     }
 }
 

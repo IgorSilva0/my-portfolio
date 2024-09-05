@@ -75,13 +75,13 @@ const Menu = ({ isOpen, setIsOpen, setCurrent, setArrowVisible }: any) => {
         >
           <motion.ul>
             <motion.li variants={itemVariants}>
-              <a onClick={()=>{handleClick(mywork); setCurrent("mywork")}}>My Work</a>
+              <a onClick={()=>{handleClick(mywork)}}>My Work</a>
             </motion.li>
             <motion.li variants={itemVariants}>
-              <a onClick={()=>{handleClick(about); setCurrent("about")}}>About</a>
+              <a onClick={()=>{handleClick(about)}}>About</a>
             </motion.li>
             <motion.li variants={itemVariants}>
-              <a onClick={()=> {handleClick(contact); setCurrent("contact")}}>Contact</a>
+              <a onClick={()=>{handleClick(contact)}}>Contact</a>
             </motion.li>
           </motion.ul>
         </motion.nav>

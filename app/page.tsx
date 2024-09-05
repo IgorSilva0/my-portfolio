@@ -30,9 +30,6 @@ const Home = () => {
   const [arrowVisible, setArrowVisible] = useState(0);
 
   const [home, setHome] = useState<Element | null>(null);
-  const [mywork, setMywork] = useState<Element | null>(null);
-  const [about, setAbout] = useState<Element | null>(null);
-  const [contact, setContact] = useState<Element | null>(null);
 
   const handleClick = async (section: Element | null) => {
     setArrowVisible(0);
@@ -41,14 +38,11 @@ const Home = () => {
 
   useEffect(() => {
     setHome(document.querySelector(`#home`));
-    setMywork(document.querySelector(`#mywork`));
-    setAbout(document.querySelector(`#about`));
-    setContact(document.querySelector(`#contact`));
   }, []);
 
   return (
     <>
-      <section className={current === 'home' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='home'>
+      <section className={styles.sections} id='home'>
         <Nav setCurrent={setCurrent} setArrowVisible={setArrowVisible}/>
         <NavMobile setCurrent={setCurrent} setArrowVisible={setArrowVisible}/>
         <motion.div
@@ -69,11 +63,9 @@ const Home = () => {
           <div className={styles.imgBox}>
             <Image className={styles.img} src={'/imgs/profile.png'} alt='Profile image' width={265} height={450} />
           </div>
-          {current === 'home' ? <FaAnglesDown className={styles.arrowDown} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(mywork); setCurrent("mywork")}}/> : null}
         </motion.div>
       </section>
-      <section className={current === 'mywork' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='mywork'>
-        {current === 'mywork' ? <FaAnglesUp className={styles.arrowUp} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(home); setCurrent("home")}}/> : null}
+      <section className={styles.sections} id='mywork'>
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -88,10 +80,8 @@ const Home = () => {
           <Project imgs={CImgs} quote={CQuote} />
           <Project imgs={GCImgs} quote={GCQuote} />
         </div>
-        {current === 'mywork' ? <FaAnglesDown className={styles.arrowDown} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(about); setCurrent("about")}}/> : null}
       </section>
-      <section className={current === 'about' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='about'>
-        {current === 'about' ? <FaAnglesUp className={styles.arrowUp} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(mywork); setCurrent("mywork")}}/> : null}
+      <section className={styles.sections} id='about'>
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -100,11 +90,9 @@ const Home = () => {
         > 
           <h1 className={styles.aboutTitle}>About</h1>
         </motion.div>
-        {current === 'about' ? <FaAnglesDown className={styles.arrowDown} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(contact); setCurrent("contact")}}/> : null}
         <About />
       </section>
-      <section className={current === 'contact' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='contact'>
-        {current === 'contact' ? <FaAnglesUp className={styles.arrowUp} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(about); setCurrent("about")}}/> : null}
+      <section className={styles.sections} id='contact'>
         <motion.div
           initial="hidden"
           whileInView="visible"
