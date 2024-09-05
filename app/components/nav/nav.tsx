@@ -9,11 +9,10 @@ const fadeInDown = {
   visible: { opacity: 1, y: 0, transition: { duration: 1 } },
 };
 
-const Nav = ({setCurrent,setArrowVisible}:any) => {
+const Nav = () => {
 
     const handleClick = async (section: string) => {
         const element = document.querySelector(`#${section}`);
-        setArrowVisible(0);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
         }

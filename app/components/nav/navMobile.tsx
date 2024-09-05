@@ -5,11 +5,11 @@ import Image from "next/image";
 import { FaGithub } from "react-icons/fa6";
 import Link from "next/link";
 
-export default function NavMobile({setCurrent,setArrowVisible}:any) {
+export default function NavMobile() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={styles.navbarmobile}>
-      <Menu isOpen={isOpen} setIsOpen={setIsOpen} setCurrent={setCurrent} setArrowVisible={setArrowVisible}/>
+      <Menu isOpen={isOpen} setIsOpen={setIsOpen}/>
       <MenuToggle toggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
       <Image src={'/imgs/signatureWhite.png'} width={100} height={50} alt="Signature Image"/>
 
@@ -46,13 +46,12 @@ const itemVariants = {
   closed: { opacity: 0, y: -20 },
 };
 
-const Menu = ({ isOpen, setIsOpen, setCurrent, setArrowVisible }: any) => {
+const Menu = ({ isOpen, setIsOpen }: any) => {
   const [mywork, setMywork] = useState<Element | null>(null);
   const [about, setAbout] = useState<Element | null>(null);
   const [contact, setContact] = useState<Element | null>(null);
 
   const handleClick = async (section: Element | null) => {
-    setArrowVisible(0);
     setIsOpen(false);
     section!.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
   };

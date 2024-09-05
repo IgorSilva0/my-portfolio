@@ -26,13 +26,9 @@ const fadeInDown = {
 };
 
 const Home = () => {
-  const [current, setCurrent] = useState('home');
-  const [arrowVisible, setArrowVisible] = useState(0);
-
   const [home, setHome] = useState<Element | null>(null);
 
   const handleClick = async (section: Element | null) => {
-    setArrowVisible(0);
     section!.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
   };
 
@@ -43,8 +39,8 @@ const Home = () => {
   return (
     <>
       <section className={styles.sections} id='home'>
-        <Nav setCurrent={setCurrent} setArrowVisible={setArrowVisible}/>
-        <NavMobile setCurrent={setCurrent} setArrowVisible={setArrowVisible}/>
+        <Nav />
+        <NavMobile />
         <motion.div
             initial="hidden"
             whileInView="visible"
@@ -102,8 +98,8 @@ const Home = () => {
           <h1 className={styles.contactTitle}>Contact</h1>
         </motion.div>
         <Contact/>
-        <BiHomeHeart className={styles.returnHome} onClick={()=>{handleClick(home); setCurrent("home")}}/>
-        {current === 'contact' ? <GiReturnArrow className={styles.arrowDown} style={{ opacity: arrowVisible, fontSize: '2rem' }} onClick={()=>{handleClick(home); setCurrent("home")}}/> : null}
+        <BiHomeHeart className={styles.returnHome} onClick={()=>handleClick(home)}/>
+        <GiReturnArrow className={styles.arrowDown} style={{ opacity: 1, fontSize: '2rem' }} onClick={()=>handleClick(home)}/>
       </section>
     </>
   );
