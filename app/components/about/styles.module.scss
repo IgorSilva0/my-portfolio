@@ -13,6 +13,8 @@
         flex-direction: column;
         gap: 0;
     }
+
+
 }
 
 .imgBox {
@@ -27,6 +29,11 @@
     @include xs {
         display: none;
     }
+
+    @media screen and (max-height: 860px) {
+        display: none;
+
+    }
 }
 
 .img {
@@ -40,6 +47,10 @@
     //margin-top: $about-text-box-mt;
     @include xs {
         width: 98dvw;
+    }
+
+    @media (max-height: 860px) and (min-width: 540px) {
+        width: 80dvw;
     }
 }
 

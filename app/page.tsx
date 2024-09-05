@@ -29,16 +29,15 @@ const Home = () => {
   const [current, setCurrent] = useState('home')
   const [arrowVisible, setArrowVisible] = useState(0)
 
-  const handleClick = (section: string) => {
+  const handleClick = async (section: string) => {
+    const element = document.querySelector(`#${section}`);
     setCurrent(section);
     setArrowVisible(0);
-    setTimeout(() => {
-      const element = document.querySelector(`#${section}`);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-      }
-    }, 100);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    }
   };
+
   useEffect(() => {
     let incrementValue = 0;
     const interval = 17; // Interval in milliseconds

@@ -11,14 +11,14 @@ const fadeInDown = {
 
 const Nav = ({setCurrent,setArrowVisible}:any) => {
 
-    const handleClick = (section:string) =>{
-        setCurrent(section)
-        setArrowVisible(0)
-        setTimeout(()=>{
-            const element = document.querySelector(`#${section}`)
-            element!.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
-        }, 100)
-    }
+    const handleClick = async (section: string) => {
+        const element = document.querySelector(`#${section}`);
+        setCurrent(section);
+        setArrowVisible(0);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        }
+      };
 
     return (
         <motion.div
