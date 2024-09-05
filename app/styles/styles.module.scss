@@ -239,12 +239,12 @@
     display: flex;
     align-self: center;
     flex-direction: column;
-    width: 80dvw;
+
     overflow-y: scroll;
     margin-bottom: 3rem;
 
     @include xs {
-        width: 99dvw;
+
         overflow-x: hidden;
     }
 }
