@@ -7,7 +7,6 @@ import Link from "next/link";
 
 export default function NavMobile({setCurrent,setArrowVisible}:any) {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className={styles.navbarmobile}>
       <Menu isOpen={isOpen} setIsOpen={setIsOpen} setCurrent={setCurrent} setArrowVisible={setArrowVisible}/>
@@ -48,14 +47,14 @@ const itemVariants = {
 };
 
 const Menu = ({ isOpen, setIsOpen, setCurrent, setArrowVisible }: any) => {
+  const mywork = document.querySelector(`#mywork`);
+  const about = document.querySelector(`#about`);
+  const contact = document.querySelector(`#contact`);
 
-  const handleClick = async (section: string) => {
-    const element = document.querySelector(`#${section}`);
-    setCurrent(section);
+  const handleClick = async (section: Element | null) => {
     setArrowVisible(0);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-    }
+    setIsOpen(false);
+    section!.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
   };
   
   return (
@@ -70,13 +69,13 @@ const Menu = ({ isOpen, setIsOpen, setCurrent, setArrowVisible }: any) => {
         >
           <motion.ul>
             <motion.li variants={itemVariants}>
-              <a onClick={()=>handleClick('mywork')}>My Work</a>
+              <a onClick={()=>{handleClick(mywork); setCurrent("mywork")}}>My Work</a>
             </motion.li>
             <motion.li variants={itemVariants}>
-              <a onClick={()=>handleClick('about')}>About</a>
+              <a onClick={()=>{handleClick(about); setCurrent("about")}}>About</a>
             </motion.li>
             <motion.li variants={itemVariants}>
-              <a onClick={()=> handleClick('contact')}>Contact</a>
+              <a onClick={()=> {handleClick(contact); setCurrent("contact")}}>Contact</a>
             </motion.li>
           </motion.ul>
         </motion.nav>

@@ -13,7 +13,6 @@ const Nav = ({setCurrent,setArrowVisible}:any) => {
 
     const handleClick = async (section: string) => {
         const element = document.querySelector(`#${section}`);
-        setCurrent(section);
         setArrowVisible(0);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
@@ -35,9 +34,9 @@ const Nav = ({setCurrent,setArrowVisible}:any) => {
             </div>
             <Image className={styles.signature} src={'/imgs/signatureWhite.png'} alt='Signature Png' width={140} height={60}/>
             <div className={styles.btns}>
-            <a onClick={()=>handleClick('mywork')}><button>MY WORK</button></a> 
-            <a onClick={()=>handleClick('about')}><button>ABOUT</button></a>  
-            <a onClick={()=>handleClick('contact')}><button>CONTACT</button></a> 
+            <a onClick={()=>{handleClick('mywork'); setCurrent("mywork")}}><button>MY WORK</button></a> 
+            <a onClick={()=>{handleClick('about'); setCurrent("about")}}><button>ABOUT</button></a>  
+            <a onClick={()=>{handleClick('contact'); setCurrent("contact")}}><button>CONTACT</button></a> 
             </div>
         </nav>
         </motion.div>

@@ -29,13 +29,14 @@ const Home = () => {
   const [current, setCurrent] = useState('home')
   const [arrowVisible, setArrowVisible] = useState(0)
 
-  const handleClick = async (section: string) => {
-    const element = document.querySelector(`#${section}`);
-    setCurrent(section);
+  const home = document.querySelector(`#home`);
+  const mywork = document.querySelector(`#mywork`);
+  const about = document.querySelector(`#about`);
+  const contact = document.querySelector(`#contact`);
+
+  const handleClick = async (section: Element | null) => {
     setArrowVisible(0);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-    }
+    section!.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
   };
 
   useEffect(() => {
@@ -78,11 +79,11 @@ const Home = () => {
           <div className={styles.imgBox}>
             <Image className={styles.img} src={'/imgs/profile.png'} alt='Profile image' width={265} height={450} />
           </div>
-          {current === 'home' ? <FaAnglesDown className={styles.arrowDown} style={{ opacity: arrowVisible }} onClick={()=>handleClick('mywork')}/> : null}
+          {current === 'home' ? <FaAnglesDown className={styles.arrowDown} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(mywork); setCurrent("mywork")}}/> : null}
         </motion.div>
       </section>
       <section className={current === 'mywork' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='mywork'>
-        {current === 'mywork' ? <FaAnglesUp className={styles.arrowUp} style={{ opacity: arrowVisible }} onClick={()=>handleClick('home')}/> : null}
+        {current === 'mywork' ? <FaAnglesUp className={styles.arrowUp} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(home); setCurrent("home")}}/> : null}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -97,10 +98,10 @@ const Home = () => {
           <Project imgs={CImgs} quote={CQuote} />
           <Project imgs={GCImgs} quote={GCQuote} />
         </div>
-        {current === 'mywork' ? <FaAnglesDown className={styles.arrowDown} style={{ opacity: arrowVisible }} onClick={()=>handleClick('about')}/> : null}
+        {current === 'mywork' ? <FaAnglesDown className={styles.arrowDown} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(about); setCurrent("about")}}/> : null}
       </section>
       <section className={current === 'about' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='about'>
-        {current === 'about' ? <FaAnglesUp className={styles.arrowUp} style={{ opacity: arrowVisible }} onClick={()=>handleClick('mywork')}/> : null}
+        {current === 'about' ? <FaAnglesUp className={styles.arrowUp} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(mywork); setCurrent("mywork")}}/> : null}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -109,11 +110,11 @@ const Home = () => {
         > 
           <h1 className={styles.aboutTitle}>About</h1>
         </motion.div>
-        {current === 'about' ? <FaAnglesDown className={styles.arrowDown} style={{ opacity: arrowVisible }} onClick={()=>handleClick('contact')}/> : null}
+        {current === 'about' ? <FaAnglesDown className={styles.arrowDown} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(contact); setCurrent("contact")}}/> : null}
         <About />
       </section>
       <section className={current === 'contact' ? styles.sections : `${styles.sections} ${styles.hidden}`} id='contact'>
-        {current === 'contact' ? <FaAnglesUp className={styles.arrowUp} style={{ opacity: arrowVisible }} onClick={()=>handleClick('about')}/> : null}
+        {current === 'contact' ? <FaAnglesUp className={styles.arrowUp} style={{ opacity: arrowVisible }} onClick={()=>{handleClick(about); setCurrent("about")}}/> : null}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -123,8 +124,8 @@ const Home = () => {
           <h1 className={styles.contactTitle}>Contact</h1>
         </motion.div>
         <Contact/>
-        <BiHomeHeart className={styles.returnHome} onClick={()=>handleClick('home')}/>
-        {current === 'contact' ? <GiReturnArrow className={styles.arrowDown} style={{ opacity: arrowVisible, fontSize: '2rem' }} onClick={()=>handleClick('home')}/> : null}
+        <BiHomeHeart className={styles.returnHome} onClick={()=>{handleClick(home); setCurrent("home")}}/>
+        {current === 'contact' ? <GiReturnArrow className={styles.arrowDown} style={{ opacity: arrowVisible, fontSize: '2rem' }} onClick={()=>{handleClick(home); setCurrent("home")}}/> : null}
       </section>
     </>
   );
