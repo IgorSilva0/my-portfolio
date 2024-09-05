@@ -12,7 +12,7 @@ import { SoCImgs, SoCQuote } from '@/public/imgs/SoCBrain/imgs';
 import { GCImgs, GCQuote } from '@/public/imgs/GamingCombo/imgs';
 import { CImgs, CQuote } from '@/public/imgs/Countries/imgs';
 import { CarRentalImgs, CarRentalQuote } from '@/public/imgs/CarRental/imgs';
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import NavMobile from './components/nav/navMobile';
 import { BiHomeHeart } from "react-icons/bi";
 
@@ -26,18 +26,25 @@ const fadeInDown = {
 };
 
 const Home = () => {
-  const [current, setCurrent] = useState('home')
-  const [arrowVisible, setArrowVisible] = useState(0)
+  const [current, setCurrent] = useState('home');
+  const [arrowVisible, setArrowVisible] = useState(0);
 
-  const home = document.querySelector(`#home`);
-  const mywork = document.querySelector(`#mywork`);
-  const about = document.querySelector(`#about`);
-  const contact = document.querySelector(`#contact`);
+  const [home, setHome] = useState<Element | null>(null);
+  const [mywork, setMywork] = useState<Element | null>(null);
+  const [about, setAbout] = useState<Element | null>(null);
+  const [contact, setContact] = useState<Element | null>(null);
 
   const handleClick = async (section: Element | null) => {
     setArrowVisible(0);
     section!.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
   };
+
+  useEffect(() => {
+    setHome(document.querySelector(`#home`));
+    setMywork(document.querySelector(`#mywork`));
+    setAbout(document.querySelector(`#about`));
+    setContact(document.querySelector(`#contact`));
+  }, [])
 
   useEffect(() => {
     let incrementValue = 0;

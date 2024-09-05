@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from './styles.module.scss'; // Import the SCSS file
 import Image from "next/image";
@@ -47,9 +47,9 @@ const itemVariants = {
 };
 
 const Menu = ({ isOpen, setIsOpen, setCurrent, setArrowVisible }: any) => {
-  const mywork = document.querySelector(`#mywork`);
-  const about = document.querySelector(`#about`);
-  const contact = document.querySelector(`#contact`);
+  const [mywork, setMywork] = useState<Element | null>(null);
+  const [about, setAbout] = useState<Element | null>(null);
+  const [contact, setContact] = useState<Element | null>(null);
 
   const handleClick = async (section: Element | null) => {
     setArrowVisible(0);
@@ -57,6 +57,12 @@ const Menu = ({ isOpen, setIsOpen, setCurrent, setArrowVisible }: any) => {
     section!.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
   };
   
+  useEffect(() => {
+    setMywork(document.querySelector(`#mywork`));
+    setAbout(document.querySelector(`#about`));
+    setContact(document.querySelector(`#contact`));
+  }, [])
+
   return (
     <AnimatePresence>
       {isOpen && (
