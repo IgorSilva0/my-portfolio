@@ -12,7 +12,7 @@ import { SoCImgs, SoCQuote } from '@/public/imgs/SoCBrain/imgs';
 import { GCImgs, GCQuote } from '@/public/imgs/GamingCombo/imgs';
 import { CImgs, CQuote } from '@/public/imgs/Countries/imgs';
 import { CarRentalImgs, CarRentalQuote } from '@/public/imgs/CarRental/imgs';
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import NavMobile from './components/nav/navMobile';
 import { BiHomeHeart } from "react-icons/bi";
 
@@ -44,24 +44,7 @@ const Home = () => {
     setMywork(document.querySelector(`#mywork`));
     setAbout(document.querySelector(`#about`));
     setContact(document.querySelector(`#contact`));
-  }, [])
-
-  useEffect(() => {
-    let incrementValue = 0;
-    const interval = 17; // Interval in milliseconds
-    const maxIncrements = 100; // Number of increments
-    
-      const intervalId = setInterval(() => {
-        setArrowVisible((prev) => prev + 0.01);
-        incrementValue++;
-
-        if (incrementValue >= maxIncrements) {
-          clearInterval(intervalId);
-        }
-      }, interval);
-
-      return () => clearInterval(intervalId); // Cleanup the interval on component unmount
-  }, [current]);
+  }, []);
 
   return (
     <>
