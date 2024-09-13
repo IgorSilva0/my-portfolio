@@ -11,6 +11,7 @@ import { SoCImgs, SoCQuote } from '@/public/imgs/SoCBrain/imgs';
 import { GCImgs, GCQuote } from '@/public/imgs/GamingCombo/imgs';
 import { CImgs, CQuote } from '@/public/imgs/Countries/imgs';
 import { CarRentalImgs, CarRentalQuote } from '@/public/imgs/CarRental/imgs';
+import { OnlineShopImgs, OnlineShopQuote } from '@/public/imgs/OnlineShop/imgs';
 import { useEffect, useState } from 'react';
 import NavMobile from './components/nav/navMobile';
 import { BiHomeHeart } from "react-icons/bi";
@@ -70,6 +71,7 @@ const Home = () => {
           <h1 className={styles.projectsTitle}>My Work</h1>
         </motion.div>
         <div className={styles.projects}> 
+          <Project imgs={OnlineShopImgs} quote={OnlineShopQuote} />
           <Project imgs={SoCImgs} quote={SoCQuote} />
           <Project imgs={CarRentalImgs} quote={CarRentalQuote} />
           <Project imgs={CImgs} quote={CQuote} />

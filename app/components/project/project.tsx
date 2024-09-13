@@ -7,9 +7,9 @@ import { SiNextdotjs, SiVercel, SiTailwindcss,
   SiTypescript, SiReact, SiJavascript, 
   SiPlaywright, SiSwr, SiCss3, SiPostgresql,
   SiSass, SiGithubactions, SiHtml5, SiGit,
-  SiNodedotjs, SiExpress, SiJest,SiSwiper
+  SiNodedotjs, SiExpress, SiJest, SiSwiper , SiShadcnui
  } from "react-icons/si";
-
+ import { FaStripe } from "react-icons/fa6";
 const iconComponents:any = {
   'SiNextdotjs': SiNextdotjs,
   'SiVercel': SiVercel,
@@ -27,6 +27,8 @@ const iconComponents:any = {
   'SiSass': SiSass,
   'SiGithubactions': SiGithubactions,
   'SiSwiper': SiSwiper,
+  'SiShadcnui' : SiShadcnui,
+  'FaStripe': FaStripe,
 };
 
 import 'swiper/css';
@@ -36,6 +38,7 @@ import 'swiper/css/effect-coverflow';
 
 import styles from './styles.module.scss';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -73,7 +76,7 @@ export default function Project({imgs, quote}: any) {
       >
         {imgs.map((item:any, key:number)=>(
           <SwiperSlide className={styles.swiperSlide} key={key}>
-            <img src={item.src} alt={item.alt}/>
+            <Image src={item.src} alt={item.alt} width={200} height={270}/>
           </SwiperSlide>
         ))}
       </Swiper>
