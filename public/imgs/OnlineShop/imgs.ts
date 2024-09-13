@@ -30,8 +30,8 @@ export const OnlineShopImgs = [
 ]
 
 export const OnlineShopQuote = {
-    title: 'Advanced Online Shop Management System',
-    text: 'Streamline your travel with our Online Shop App, crafted with React and Next.js for reliable performance. Access real-time availability, secure login, and a responsive mobile design. Upcoming features like payment integration and UI/UX improvements will enhance your experience even further. Start your adventure now and stay tuned for more updates!',
+    title: 'Innovative E-Commerce Experience',
+    text: 'Transform your shopping experience with Online Shop, built using Next.js and React for seamless performance. Enjoy user-friendly features like secure authentication, dynamic product browsing, and a responsive design with dark and light modes. Benefit from smooth checkout processes via Stripe and gain insights into your purchases through an intuitive dashboard. Explore now and watch as we continuously enhance the platform with new features and improvements!',
     repo: 'https://github.com/IgorSilva0/ecommerce',
     live: 'https://ecommerce-rho-woad.vercel.app/',
     stack: ['SiNextdotjs', 'SiVercel', 'FaStripe', 'SiGithubactions', 'SiTailwindcss', 'SiSupabase', 'SiTypescript', 'SiPlaywright', 'SiShadcnui'],
