@@ -35,4 +35,5 @@ export const OnlineShopQuote = {
     repo: 'https://github.com/IgorSilva0/ecommerce',
     live: 'https://ecommerce-rho-woad.vercel.app/',
     stack: ['SiNextdotjs', 'SiVercel', 'FaStripe', 'SiGithubactions', 'SiTailwindcss', 'SiSupabase', 'SiTypescript', 'SiPlaywright', 'SiShadcnui'],
+    alert: 'Before you explore further, here are the credentials:\n\nEmail: test@gmail.com\nPassword: 123456'
 }
