@@ -105,9 +105,32 @@
 
 .thanks {
     color: $body-text-color;
-    margin: 0;
     font-weight: 500;
     font-size: $body-text-size;
+
+    @include xs {
+        display: none;
+    }
+}
+
+.currently {
+    color: $body-text-color;
+    font-weight: 500;
+    font-size: $body-text-size;
+
+    @include xs {
+        font-size: $body-mobile-text-size;
+    }
+}
+
+.lastupdate {
+    color: $body-text-color;
+    font-weight: 500;
+    font-size: $body-text-size;
+    background-color: #0b50a0;
+    padding: 2px 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #69b4dfd8;
 
     @include xs {
         display: none;

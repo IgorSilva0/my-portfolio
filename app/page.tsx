@@ -36,6 +36,22 @@ const Home = () => {
     setHome(document.querySelector(`#home`));
   }, []);
 
+  function getCurrentDate(): string {
+    const today = new Date();
+    
+    // Array of month names to convert numeric month to string
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June", 
+        "July", "August", "September", "October", "November", "December"
+    ];
+
+    const day = today.getDate();
+    const month = monthNames[today.getMonth()];
+    const year = today.getFullYear();
+
+    return `Last updated: ${month} ${day}, ${year}`;
+  }
+
   return (
     <>
       <section className={styles.sections} id='home'>
@@ -54,7 +70,8 @@ const Home = () => {
             <p className={styles.txt}>
               I&apos;m excited to share my journey with you. Here, you&apos;ll find a collection of projects that I&apos;m passionate about and proud of.
             </p>
-            <p className={styles.thanks}>Thanks for stopping by!</p>
+            <p className={styles.currently}>Currently, I&apos;m learning Python and building an online banking web app.</p>
+            <span className={styles.lastupdate}>{getCurrentDate()}</span>
           </div>
           <div className={styles.imgBox}>
             <Image className={styles.img} src={'/imgs/profile.png'} alt='Profile image' width={265} height={450} />
